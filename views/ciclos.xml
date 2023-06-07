@@ -1,0 +1,38 @@
+<odoo><data>
+        <record model="ir.actions.act_window" id="ciclos_list_action">
+            <field name="name">Ciclos</field>
+            <field name="res_model">odoo_pruebas_relaciones.ciclos</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">No hay ciclos</p>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="ciclos_tree_view">
+
+            <field name="name">ciclos.tree</field>
+            <field name="model">odoo_pruebas_relaciones.ciclos</field>
+            <field name="arch" type="xml">
+
+                <tree string="Ciclo">
+                    <field name="name"/>
+                </tree>
+
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="ciclos_form_view">
+            <field name="name">ciclos.form</field>
+            <field name="model">odoo_pruebas_relaciones.ciclos</field>
+            <field name="arch" type="xml">
+                <form string="Formulario para ciclos">
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </form>
+            </field>
+
+        </record>
+
+
+</data></odoo>

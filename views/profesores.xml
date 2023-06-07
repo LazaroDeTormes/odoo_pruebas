@@ -1,0 +1,38 @@
+<odoo><data>
+        <record model="ir.actions.act_window" id="profesores_list_action">
+            <field name="name">profesores</field>
+            <field name="res_model">odoo_pruebas_relaciones.profesores</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">No hay profesores</p>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="profesores_tree_view">
+
+            <field name="name">profesores.tree</field>
+            <field name="model">odoo_pruebas_relaciones.profesores</field>
+            <field name="arch" type="xml">
+
+                <tree string="Profesor">
+                    <field name="name"/>
+                </tree>
+
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="profesores_form_view">
+            <field name="name">profesores.form</field>
+            <field name="model">odoo_pruebas_relaciones.profesores</field>
+            <field name="arch" type="xml">
+                <form string="Formulario para profesores">
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </form>
+            </field>
+
+        </record>
+
+
+</data></odoo>

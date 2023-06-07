@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+odoo_pruebas_relaciones_notas,odoo_pruebas_relaciones.notas,model_odoo_pruebas_relaciones_notas,base.group_user,1,1,1,1
+odoo_pruebas_relaciones_ciclos,odoo_pruebas_relaciones.ciclos,model_odoo_pruebas_relaciones_ciclos,base.group_user,1,1,1,1
+odoo_pruebas_relaciones_modulos,odoo_pruebas_relaciones.modulos,model_odoo_pruebas_relaciones_modulos,base.group_user,1,1,1,1
+odoo_pruebas_relaciones_curso,odoo_pruebas_relaciones.curso,model_odoo_pruebas_relaciones_curso,base.group_user,1,1,1,1
+odoo_pruebas_relaciones_profesores,odoo_pruebas_relaciones.profesores,model_odoo_pruebas_relaciones_profesores,base.group_user,1,1,1,1

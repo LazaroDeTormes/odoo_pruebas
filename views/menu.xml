@@ -1,0 +1,11 @@
+<odoo>
+    <data>
+        <menuitem id="fp" name="F.P.2"/>
+        <menuitem id="main_odoo_pruebas_relaciones" parent="fp" name="Exame"/>
+        <menuitem id="curso" name="Curso académico" parent="main_odoo_pruebas_relaciones" action="curso_list_action"/>
+        <menuitem id="ciclos" name="Ciclos" parent="main_odoo_pruebas_relaciones" action="ciclos_list_action"/>
+        <menuitem id="modulos" name="Módulos" parent="main_odoo_pruebas_relaciones" action="modulos_list_action"/>
+        <menuitem id="notas" name="Notas" parent="main_odoo_pruebas_relaciones" action="notas_list_action"/>
+        <menuitem id="profesores" name="Profesores" parent="main_odoo_pruebas_relaciones" action="profesores_list_action"/>
+    </data>
+</odoo>

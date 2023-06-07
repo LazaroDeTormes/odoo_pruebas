@@ -1,0 +1,38 @@
+<odoo><data>
+        <record model="ir.actions.act_window" id="curso_list_action">
+            <field name="name">Curso Académico</field>
+            <field name="res_model">odoo_pruebas_relaciones.curso</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">No hay curso académico</p>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="curso_tree_view">
+
+            <field name="name">curso.tree</field>
+            <field name="model">odoo_pruebas_relaciones.curso</field>
+            <field name="arch" type="xml">
+
+                <tree string="Curso">
+                    <field name="name"/>
+                </tree>
+
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="curso_form_view">
+            <field name="name">curso.form</field>
+            <field name="model">odoo_pruebas_relaciones.curso</field>
+            <field name="arch" type="xml">
+                <form string="Formulario para curso">
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </form>
+            </field>
+
+        </record>
+
+</data></odoo>

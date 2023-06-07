@@ -1,0 +1,69 @@
+<odoo><data>
+        <record model="ir.actions.act_window" id="notas_list_action">
+            <field name="name">Notas</field>
+            <field name="res_model">odoo_pruebas_relaciones.notas</field>
+            <field name="view_mode">tree,graph</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">No hay notas</p>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="notas_tree_view">
+
+            <field name="name">notas.tree</field>
+            <field name="model">odoo_pruebas_relaciones.notas</field>
+            <field name="arch" type="xml">
+
+                <tree string="Notas" decoration-success="nota_txt == 'Sobresaliente' or nota_txt == 'Notable'" decoration-warning="nota_txt == 'Bien' or nota_txt == 'Suficiente'" decoration-danger="nota_txt == 'Suspenso'">
+                    <field name="anho"/>
+                    <field name="ciclo"/>
+                    <field name="quenda"/>
+                    <field name="curso"/>
+                    <field name="modulo"/>
+                    <field name="nota"/>
+                    <field name="nota_txt"/>
+                    <field name="many"/>
+                </tree>
+
+            </field>
+        </record>
+
+    <record model="ir.ui.view" id="notas_graph_view">
+        <field name="name">notas.grafico</field>
+        <field name="model">odoo_pruebas_relaciones.notas</field>
+        <field name="arch" type="xml">
+            <graph string="notas" type="bar">
+                <field name="nota" type="row"/>
+            </graph>
+        </field>
+    </record>
+
+
+   <record model="ir.filters" id="filtro1">
+            <field name="name">Filtro ciclo</field>
+            <field name="model_id">odoo_pruebas_relaciones.notas</field>
+            <field name="context">{'group_by': ['ciclo']}</field>
+            <field name="is_default">true</field>
+            <field name="active">true</field>
+            <field name="sort">[]</field>
+            <field name="domain">[]</field><!-- Aquí iría o filtro -->
+            <field name="user_id"></field><!-- En blanco para que esté dispoñible para todos os usuarios -->
+            <field name="action_id" eval="ref('odoo_pruebas_relaciones.notas_list_action')"/><!-- Obtemos o id a partir do id externo-->
+        </record>
+
+    <record model="ir.filters" id="filtro2">
+            <field name="name">Filtro compuesto</field>
+            <field name="model_id">odoo_pruebas_relaciones.notas</field>
+            <field name="context"></field>
+            <field name="is_default">true</field>
+            <field name="active">true</field>
+            <field name="sort">[]</field>
+            <field name="domain">['|', '&amp;', ('anho','=','20-21'),('modulo','=','SXE'),'&amp;',('anho','=','19-20'),('quenda','=','Vespertino') ]</field><!-- Aquí iría o filtro -->
+            <field name="user_id"></field><!-- En blanco para que esté dispoñible para todos os usuarios -->
+            <field name="action_id" eval="ref('odoo_pruebas_relaciones.notas_list_action')"/><!-- Obtemos o id a partir do id externo-->
+        </record>
+
+
+
+</data></odoo>
